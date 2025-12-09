@@ -25,6 +25,9 @@ export const metadata: Metadata = {
     "Volunteering",
   ],
   authors: [{ name: "KUN FAYAKOON Team" }],
+  icons: {
+    icon: "/logo1.jpg",
+  },
   openGraph: {
     title: "KUN FAYAKOON | Building a Brighter Future",
     description:
@@ -50,6 +53,11 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/logo1.jpg" />
+        <link rel="shortcut icon" href="/logo1.jpg" />
+        <meta name="theme-color" content="#ffffff" />
+      </head>
       <body
         className={`${lato.variable} font-sans bg-[#FFFFFF] text-[#111D15] antialiased selection:bg-[#2E8B57]/10 selection:text-[#2E8B57]`}
       >

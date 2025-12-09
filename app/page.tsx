@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import About from "@/components/AboutSection";
 import DonationSection from "@/components/DonationSection";
+import DistributionSection from "@/components/DistributionSection";
 import CampaignsSection from "@/components/CampaignsSection";
 import DonationBreakdown from "@/components/DonationBreakdown";
 import BlogSection from "@/components/BlogSection";
@@ -22,6 +23,9 @@ export default function Home() {
       <section className="bg-[#EDEDED]">
         <DonationSection />
       </section>
+
+      {/* Distribution Section */}
+      <DistributionSection />
 
       {/* Campaigns Section */}
       <section className="bg-[#FFFFFF]">
