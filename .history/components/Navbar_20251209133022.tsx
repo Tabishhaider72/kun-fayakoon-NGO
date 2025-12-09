@@ -71,16 +71,16 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2 hover:text-[#2E8B57] transition">
           <FaHome className="text-[#2E8B57]" /> Home
         </Link>
-        <Link href="/#about-section" className="flex items-center gap-2 hover:text-[#2E8B57] transition">
+        <Link href="/about" className="flex items-center gap-2 hover:text-[#2E8B57] transition">
           <FaInfoCircle className="text-[#2E8B57]" /> About us
         </Link>
-        <Link href="/donate" className="flex items-center gap-2 hover:text-[#2E8B57] transition">
+        <Link href="/donations" className="flex items-center gap-2 hover:text-[#2E8B57] transition">
           <FaDonate className="text-[#2E8B57]" /> Donations
         </Link>
-        <Link href="/#campaigns-section" className="flex items-center gap-2 hover:text-[#2E8B57] transition">
+        <Link href="/campaigns" className="flex items-center gap-2 hover:text-[#2E8B57] transition">
           <FaHandsHelping className="text-[#2E8B57]" /> Campaigns
         </Link>
-        <Link href="/#blog-section" className="flex items-center gap-2 hover:text-[#2E8B57] transition">
+        <Link href="/blogs" className="flex items-center gap-2 hover:text-[#2E8B57] transition">
           <FaBlog className="text-[#2E8B57]" /> Blogs
         </Link>
       </div>
@@ -129,28 +129,28 @@ export default function Navbar() {
               <FaHome className="text-[#2E8B57]" /> Home
             </Link>
             <Link
-              href="/#about-section"
+              href="/about"
               onClick={() => setMenuOpen(false)}
               className="flex items-center gap-2 text-[#111D15] hover:text-[#2E8B57] transition"
             >
               <FaInfoCircle className="text-[#2E8B57]" /> About us
             </Link>
             <Link
-              href="/donate"
+              href="/donations"
               onClick={() => setMenuOpen(false)}
               className="flex items-center gap-2 text-[#111D15] hover:text-[#2E8B57] transition"
             >
               <FaDonate className="text-[#2E8B57]" /> Donations
             </Link>
             <Link
-              href="/#campaigns-section"
+              href="/campaigns"
               onClick={() => setMenuOpen(false)}
               className="flex items-center gap-2 text-[#111D15] hover:text-[#2E8B57] transition"
             >
               <FaHandsHelping className="text-[#2E8B57]" /> Campaigns
             </Link>
             <Link
-              href="/#blog-section"
+              href="/blogs"
               onClick={() => setMenuOpen(false)}
               className="flex items-center gap-2 text-[#111D15] hover:text-[#2E8B57] transition"
             >
