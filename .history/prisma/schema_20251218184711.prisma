@@ -1,0 +1,20 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  // Connection URL moved to `prisma.config.ts` per Prisma 7+ configuration change.
+  // Migrate will read the connection from `prisma.config.ts` or from the
+  // environment when running in CI. Do not include `url` here.
+}
+
+model Gallery {
+  id          String   @id @default(cuid())
+  title       String
+  subtitle    String?
+  imageUrl    String
+  storagePath String
+  createdAt   DateTime @default(now())
+}
