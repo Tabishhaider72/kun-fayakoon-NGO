@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FaInstagram, FaTwitter, FaDribbble, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaFacebookF } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="text-center sm:text-left">
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-4 mb-5">
             <Image
-              src="/logo.png"
+              src="/logo1.jpg"
               alt="KUN FAYAKOON Logo"
               width={70}
               height={70}
@@ -30,10 +30,17 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="flex justify-center sm:justify-start items-center gap-3 sm:gap-4 mt-5">
-            {[FaInstagram, FaTwitter, FaDribbble, FaYoutube].map((Icon, i) => (
+            {[
+              { Icon: FaFacebookF, href: "https://www.facebook.com/share/1BpvorXP9s/", label: "Facebook" },
+              { Icon: FaInstagram, href: "https://www.instagram.com/kunfayakoontrust?igsh=MTd0MHNyMTloN3dkMQ==", label: "Instagram" },
+              { Icon: FaTwitter, href: "https://x.com/kunfayakoontru1", label: "X" },
+            ].map(({ Icon, href, label }, i) => (
               <a
                 key={i}
-                href="#"
+                href={href}
+                aria-label={label}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-[#2E8B57] hover:bg-[#267948] transition"
               >
                 <Icon size={14} className="sm:text-[16px]" />
