@@ -39,15 +39,14 @@ function getImageDimensions(file: File): Promise<ImageDimensions> {
 
 async function validateImageFile(file: File): Promise<{ valid: boolean; error?: string }> {
   const VALID_TYPES = ["image/jpeg", "image/png", "image/webp", "image/gif"];
-  // Allow up to 1500 KB (1.5 MB)
-  const MAX_SIZE = 1500 * 1024; // 1500 KB
+  const MAX_SIZE = 1024 * 1024; // 1 MB
 
   if (!VALID_TYPES.includes(file.type)) {
     return { valid: false, error: `Invalid file type. Accepted formats: JPEG, PNG, WebP, GIF` };
   }
 
   if (file.size > MAX_SIZE) {
-    return { valid: false, error: `File size exceeds 1500 KB (1.5 MB) limit. Current size: ${(file.size / 1024).toFixed(2)} KB` };
+    return { valid: false, error: `File size exceeds 1 MB limit. Current size: ${(file.size / 1024).toFixed(2)} KB` };
   }
 
   try {
